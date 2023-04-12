@@ -29,70 +29,65 @@
         crossorigin="anonymous"></script>
 </head>
 
-<body>
-    <header>
-        <nav class="navbar bg-body-tertiary">
-            <div class="container-fluid">
-                <span class="navbar-brand mb-0 h1">QuizzApp</span>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-        <div class="card quiz-card">
-            <div class="card-header">
-                <img src="img/logo.png" class="card-img-top" alt="...">
-                <ul class="nav nav-pills card-header-tabs">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="true" href="#">HTML</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="true" href="#">CSS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="true" href="#">JS</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="true" href="#">Java</a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="card-body">
-                <h5 class="card-title">Frage</h5>
-                <div class="card mb-2">
-                    <div class="card-body">
-                        Antwort
+<body onload="init()">
+    <main class="w-75">
+        <div class="card">
+            <div class="row g-0">
+                <div class="card-header col-md-3 px-5 bg-dark d-md-flex flex-md-column align-items-start">
+                    <img src="img/logo.png" class="card-img-top mb-5" alt="...">
+                    <ul class="nav nav-pills card-header-tabs flex-md-column">
+                        <li class="nav-item">
+                            <a class="nav-link bg-transparent active" aria-current="true" href="#">HTML</a>
+                        </li>
+                        <li class="nav-item bg-transparent bg-transparent">
+                            <a class="nav-link" aria-current="true" href="#">CSS</a>
+                        </li>
+                        <li class="nav-item bg-transparent">
+                            <a class="nav-link" aria-current="true" href="#">JS</a>
+                        </li>
+                        <li class="nav-item bg-transparent">
+                            <a class="nav-link" aria-current="true" href="#">Java</a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="Endscreen" class="card-body col-md-9" style="display: none;">
+                    <img src="img/brain result.png" alt="">
+                    Completed
+                    Your Score <b id="CorrectAnswer"></b>/ <b id="nrQuestionEndSreen"></b>
+                    <button class="btn btn-primary">Share</button>
+                </div>
+                <div id="QuestionBody" class="card-body col-md-9">
+                    <h5 id="currentQuestion" class="card-title">Frage</h5>
+                    <div class="card mb-2 answer-card" onclick="answer(1)">
+                        <div id="currentAnswer1" class="card-body">
+                            Antwort
+                        </div>
                     </div>
-                </div>
-                <div class="card mb-2">
-                    <div class="card-body">
-                        Antwort
+                    <div class="card mb-2 answer-card" onclick="answer(2)">
+                        <div id="currentAnswer2" class="card-body">
+                            Antwort
+                        </div>
                     </div>
-                </div>
-                <div class="card mb-2">
-                    <div class="card-body">
-                        Antwort
+                    <div class="card mb-2 answer-card" onclick="answer(3)">
+                        <div id="currentAnswer3" class="card-body">
+                            Antwort
+                        </div>
                     </div>
-                </div>
-                <div class="card mb-2">
-                    <div class="card-body">
-                        Antwort
+                    <div class="card mb-2 answer-card" onclick="answer(4)">
+                        <div id="currentAnswer4" class="card-body">
+                            Antwort
+                        </div>
                     </div>
-                </div>
 
-                <div class="card-footer d-flex justify-content-between">
-                    <span><b>1</b> von  <b>5</b> Fragen </span>
-                    <button class="btn btn-primary">Nächste Frage</button>
-                </div>
+                    <div class="card-footer d-flex justify-content-between bg-transparent">
+                        <span><b id="nr-Current-Question">1</b> von <b id="nrQuestions">5</b> Fragen </span>
+                        <button onclick="nextQuestion()" id="next-Btn" class="btn btn-primary" disabled>Nächste Frage</button>
+                    </div>
 
+                </div>
             </div>
         </div>
     </main>
-
-    <footer>
-        <!-- footer content -->
-    </footer>
 </body>
 
 </html>

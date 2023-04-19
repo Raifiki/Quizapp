@@ -9,3 +9,39 @@ body{
     cursor: pointer;
     background-color:  rgba(0,0,0,0.05);
 }
+
+
+.max-width{
+    max-width: 75px;
+}
+
+.active{
+    border-left: 4px solid white !important;
+    border-radius: unset !important;
+}
+
+main{
+    max-width: 700px;
+}
+
+#QuestionBody{
+    display: none;
+}
+
+#Startscreen{
+    background-image: url(img/brainbg.jpg);
+    background-size: contain;
+    background-position: 50%;
+}
+
+#startQuizBtn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+@media (max-width:1000px){
+    main{
+        width: 100% !important;
+    }
+}

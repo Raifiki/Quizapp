@@ -21,8 +21,10 @@ body{
 }
 
 main{
-    max-width: 700px;
+    width: 100%;
+    max-width: 769px;
 }
+
 
 #QuestionBody{
     display: none;
@@ -34,14 +36,64 @@ main{
     background-position: 50%;
 }
 
+
+#Endscreen{
+    align-items: center;
+    justify-content: center;
+}
+
 #startQuizBtn {
     position: absolute;
     bottom: 20px;
     right: 20px;
 }
 
-@media (max-width:1000px){
+.navLast{
+    margin-bottom: 3rem;
+}
+
+
+#imgTropy{
+    position: absolute;
+    bottom: calc(50% - 50px);
+    right: 0;
+    height: 100px;
+}
+
+@media (max-width:767px){
+    .navLast{
+        margin-bottom: unset;
+    }
+    #startQuizBtn {
+        position: unset;
+        bottom: unset;
+        right: unset;
+    }
     main{
-        width: 100% !important;
+        height: 100%;
+    }
+    .wrapper {
+        height: 100% !important;
+    }
+    .card-header{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 170px;
+    }
+    #Startscreen,
+    #Endscreen{
+        height: calc(100vh - 170px - 0.8px);
+    }
+    #imgTropy{
+        position: absolute;
+        bottom: calc((100vh - 170px) / 2 - 50px);
+        right: 0;
+        height: 100px;
+    }
+
+    .active,.card,.card-header{
+        border: none !important;
+        border-radius: unset !important;
     }
 }

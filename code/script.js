@@ -214,7 +214,7 @@ function addOnClickEvt(){
 
 function renderEndsceen(){
     document.getElementById('QuestionBody').style.display = 'none';
-    document.getElementById('Endscreen').style = '';
+    document.getElementById('Endscreen').style.display = 'flex';
     document.getElementById('CorrectAnswer').innerHTML = `${correctAnswers}`;
     document.getElementById('nrQuestionEndSreen').innerHTML = `${questions.length}`;
 }
@@ -230,8 +230,9 @@ function styleProgressBar(){
 function resetQuiz(){
     currentQuestion = 0;
     correctAnswers = 0;
-    document.getElementById('QuestionBody').style.display = '';
     document.getElementById('Endscreen').style.display = 'none';
+    document.getElementById('Startscreen').style.display = 'none';
+    document.getElementById('QuestionBody').style.display = 'unset';
 }
 
 function chooseCategorie(idx){

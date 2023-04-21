@@ -29,10 +29,10 @@
         crossorigin="anonymous"></script>
 </head>
 
-<body onload="init()">
-    <main class="w-50 mw-75 ">
-        <div class="card">
-            <div class="row g-0">
+<body onload="">
+    <main>
+        <div class="card wrapper">
+            <div class="row g-0 h-100">
                 <div class="px-2 card-header col-md-3  bg-dark d-md-flex flex-md-column align-items-start">
                     <div class="w-100 d-flex justify-content-center mb-5 mt-2">
                         <img src="img/logo.png" class="card-img-top  max-width" alt="...">
@@ -51,16 +51,16 @@
                                 aria-current="true" href="#">JS</a>
                         </li>
                         <li class="nav-item bg-transparent">
-                            <a onclick="chooseCategorie(3)" class="nav-link bg-transparent text-center"
+                            <a onclick="chooseCategorie(3)" class="nav-link bg-transparent text-center navLast"
                                 aria-current="true" href="#">Java</a>
                         </li>
                     </ul>
                 </div>
 
                 <div id="Endscreen" class="card-body col-md-9" style="display: none">
-                    <div class="d-flex flex-column align-items-center">
+                    <div class="d-flex flex-column align-items-center justify-content-center">
                         <img src="img/brain result.png" alt="">
-                        <img class="position-absolute end-0 bottom-50 h-25" src="img/tropy.png" alt="">
+                        <img id="imgTropy" src="img/tropy.png" alt="">
                         <span><b> COMPLETE </b></span>
                         <span><b>QUIZ</b></span>
                         <p class="my-4 fs-3"><b class="text-warning me-4"> YOUR SCORE </b> <b id="CorrectAnswer"></b>/ <b id="nrQuestionEndSreen"></b> </p>
@@ -76,7 +76,7 @@
                         <p><b>Welcome to</b></p>
                         <p><b>The Awesome HTML Quiz</b></p>
                         <p>Ready for the Challenge?</p>
-                        <button id="startQuizBtn" class="btn btn-warning" onclick="">START NOW</button>
+                        <button id="startQuizBtn" class="btn btn-warning" onclick="init()">START NOW</button>
                     </div>
                 </div>
 

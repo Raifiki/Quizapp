@@ -74,6 +74,8 @@ main{
     }
     .wrapper {
         height: 100% !important;
+        border: none !important;
+        border-radius: unset !important;
     }
     .card-header{
         display: flex;
@@ -92,7 +94,7 @@ main{
         height: 100px;
     }
 
-    .active,.card,.card-header{
+    .active,.card-header{
         border: none !important;
         border-radius: unset !important;
     }

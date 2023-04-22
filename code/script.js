@@ -260,7 +260,7 @@ function renderEndsceen(){
 
 function styleProgressBar(){
     let progBar = document.getElementById('progress-bar');
-    let progress = (currentQuestion+1)/(questions.length)*100;
+    let progress = (currentQuestion)/(questions.length)*100;
     progBar.style.width = `${progress}%`;
     progBar.innerHTML = `${Math.round(progress)}%`;
 }

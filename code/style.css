@@ -88,10 +88,7 @@ main{
         height: calc(100vh - 170px - 0.8px);
     }
     #imgTropy{
-        position: absolute;
-        bottom: calc((100vh - 170px) / 2 - 50px);
-        right: 0;
-        height: 100px;
+        display: none;
     }
 
     .active,.card-header{
